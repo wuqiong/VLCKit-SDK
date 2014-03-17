@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="5053"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="戴维营卫视" id="56">
+                    <menu key="submenu" title="戴维营卫视" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="关于戴维营卫视" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129"/>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide 戴维营卫视" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit 戴维营卫视" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="视图" id="295">
+                    <menu key="submenu" title="视图" id="296">
+                        <items>
+                            <menuItem title="显示工具条" keyEquivalent="t" id="297">
+                                <connections>
+                                    <action selector="toggleToolbarShown:" target="-1" id="366"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="显示菜单栏" keyEquivalent="m" id="298">
+                                <connections>
+                                    <action selector="runToolbarCustomizationPalette:" target="-1" id="365"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="窗口" id="19">
+                    <menu key="submenu" title="窗口" systemMenu="window" id="24">
+                        <items>
+                            <menuItem title="缩小" keyEquivalent="m" id="239">
+                                <connections>
+                                    <action selector="performZoom:" target="371" id="8y4-UE-aUc"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="放大" keyEquivalent="z" id="HKP-48-99Z">
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="CKC-ie-RyS"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="戴维营卫视" id="P3V-vC-ri6">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="reopenClicked:" target="494" id="ip8-sd-zjt"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="帮助" id="490">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="帮助" systemMenu="help" id="491">
+                        <items>
+                            <menuItem title="戴维营卫视 Help" keyEquivalent="?" id="Aa0-pQ-qHr">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="yrn-11-Gdw"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <customObject id="494" customClass="YGYAppDelegate">
+            <connections>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <window title="戴维营卫视" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="343" y="130" width="640" height="480"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+            <value key="minSize" type="size" width="640" height="480"/>
+            <view key="contentView" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jWL-au-fWd">
+                        <rect key="frame" x="143" y="99" width="497" height="391"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="bg" id="iqt-sf-Bql"/>
+                    </imageView>
+                    <customView autoresizesSubviews="NO" id="z0p-Yn-fq4">
+                        <rect key="frame" x="143" y="55" width="497" height="426"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </customView>
+                    <webView id="7OM-jW-WFf">
+                        <rect key="frame" x="143" y="55" width="497" height="425"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                            <nil key="identifier"/>
+                        </webPreferences>
+                        <connections>
+                            <outlet property="policyDelegate" destination="dGU-RR-mKQ" id="zOS-oJ-NtJ"/>
+                        </connections>
+                    </webView>
+                    <customView canDrawConcurrently="YES" id="WGh-eH-IfL" customClass="YGYPlayerToolBar">
+                        <rect key="frame" x="409" y="0.0" width="231" height="57"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button id="4Am-hs-WYI">
+                                <rect key="frame" x="0.0" y="9" width="35" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="pause" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="fhV-qx-9Mn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didPlayPauseClicked:" target="dGU-RR-mKQ" id="9MW-Pj-PrH"/>
+                                </connections>
+                            </button>
+                            <slider verticalHuggingPriority="750" id="gTE-8X-eTS">
+                                <rect key="frame" x="60" y="18" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="200" doubleValue="100" tickMarkPosition="above" sliderType="linear" id="SiN-bi-Z0e"/>
+                                <connections>
+                                    <action selector="didVolumeChanged:" target="dGU-RR-mKQ" id="teg-3v-dnp"/>
+                                </connections>
+                            </slider>
+                            <button id="Fme-v3-tjY">
+                                <rect key="frame" x="29" y="16" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="volume-low" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="WGt-zl-ME9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="minVolumeClicked:" target="dGU-RR-mKQ" id="ipF-7K-TRT"/>
+                                </connections>
+                            </button>
+                            <button id="WaX-5B-byT">
+                                <rect key="frame" x="166" y="14" width="29" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="volume-high" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="mKD-M3-H8q">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="maxVolumeClicked:" target="dGU-RR-mKQ" id="i0a-kS-oOI"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" id="pMo-Yo-4Hy">
+                                <rect key="frame" x="204" y="42" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="window-fullscreen" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="zdj-UZ-1kG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didFullScreenClicked:" target="dGU-RR-mKQ" id="sd8-bl-EUk"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" id="D7m-zY-ACK">
+                                <rect key="frame" x="199" y="15" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="playlist-btn" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="bi0-7Q-CZR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="resolutionClicked:" target="dGU-RR-mKQ" id="Vqa-PC-tsZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </customView>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="W40-q8-0yo">
+                        <rect key="frame" x="0.0" y="0.0" width="145" height="482"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                        <clipView key="contentView" id="UHq-lx-uZl">
+                            <rect key="frame" x="1" y="1" width="143" height="480"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="systemDefault" indentationPerLevel="16" outlineTableColumn="TDZ-FS-tSL" id="5OL-pD-hxk">
+                                    <rect key="frame" x="0.0" y="0.0" width="143" height="480"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="0.0"/>
+                                    <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn identifier="channel" width="140" minWidth="16" maxWidth="1000" id="TDZ-FS-tSL">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="mEK-xR-E6O">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="dGU-RR-mKQ" id="OX8-Hy-kqJ"/>
+                                        <outlet property="delegate" destination="dGU-RR-mKQ" id="Ns2-eS-HJ2"/>
+                                    </connections>
+                                </outlineView>
+                            </subviews>
+                            <nil key="backgroundColor"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="bOZ-co-qGf">
+                            <rect key="frame" x="-100" y="-100" width="0.0" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="c2y-yc-Wku">
+                            <rect key="frame" x="-15" y="1" width="16" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <button hidden="YES" verticalHuggingPriority="750" id="CAr-gG-Hox">
+                        <rect key="frame" x="133" y="201" width="23" height="78"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" title="Gradient Button" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mdW-6T-woN">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="didDragButtonClicked:" target="dGU-RR-mKQ" id="xvo-KV-PoK"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="gDn-4n-9Kg">
+                        <rect key="frame" x="172" y="5" width="223" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="最具实力的Mac、iOS软件开发训练营" id="vWd-7Z-Ehv">
+                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button id="aQ4-7U-yef">
+                        <rect key="frame" x="174" y="20" width="218" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="logo_ad" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="7bC-Q4-vUg">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="adClicked:" target="dGU-RR-mKQ" id="oGA-sM-pi1"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+        </window>
+        <customObject id="dGU-RR-mKQ" customClass="YGYPlayerController">
+            <connections>
+                <outlet property="adWebView" destination="7OM-jW-WFf" id="Cx1-MV-VY7"/>
+                <outlet property="baseView" destination="372" id="hit-x9-4dz"/>
+                <outlet property="channelsOutline" destination="W40-q8-0yo" id="JPl-RJ-Bit"/>
+                <outlet property="mediaView" destination="z0p-Yn-fq4" id="3md-9K-gb6"/>
+                <outlet property="playButton" destination="4Am-hs-WYI" id="65b-gx-b46"/>
+                <outlet property="playerToolBar" destination="WGh-eH-IfL" id="Jhz-Dr-kAQ"/>
+                <outlet property="sideOutlineView" destination="5OL-pD-hxk" id="ahq-RN-x9A"/>
+                <outlet property="volumeSlider" destination="gTE-8X-eTS" id="IY9-xx-Ra4"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="bg" width="1024" height="768"/>
+        <image name="logo_ad" width="208" height="80"/>
+        <image name="pause" width="29" height="30"/>
+        <image name="playlist-btn" width="28" height="23"/>
+        <image name="volume-high" width="13" height="11"/>
+        <image name="volume-low" width="5" height="11"/>
+        <image name="window-fullscreen" width="14" height="14"/>
+    </resources>
+</document>
