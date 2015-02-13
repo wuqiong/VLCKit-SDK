@@ -2,7 +2,7 @@
  * VLCAudio.h: VLCKit.framework VLCAudio header
  *****************************************************************************
  * Copyright (C) 2007 Faustino E. Osuna
- * Copyright (C) 2007 VLC authors and VideoLAN
+ * Copyright (C) 2007, 2014 VLC authors and VideoLAN
  * $Id$
  *
  * Authors: Faustino E. Osuna <enrique.osuna # gmail.com>
@@ -36,15 +36,12 @@ extern NSString *const VLCMediaPlayerVolumeChanged;
  * TODO: Documentation VLCAudio
  */
 @interface VLCAudio : NSObject
-{
-    void *instance;
-}
 
 /* Properties */
 - (void)setMute:(BOOL)value;
 
 @property (setter=setMute:) BOOL isMuted;
-@property (assign) NSUInteger volume;
+@property (assign) int volume;
 
 - (void)volumeDown;
 - (void)volumeUp;

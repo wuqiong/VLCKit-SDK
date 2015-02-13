@@ -26,29 +26,19 @@
 #endif
 
 @class VLCMedia;
+@class VLCLibrary;
 @protocol VLCMediaThumbnailerDelegate;
 
-@interface VLCMediaThumbnailer : NSObject {
-    id<VLCMediaThumbnailerDelegate> _delegate;
-    VLCMedia *_media;
-    void *_mp;
-    CGImageRef _thumbnail;
-    void *_data;
-    NSTimer *_parsingTimeoutTimer;
-    NSTimer *_thumbnailingTimeoutTimer;
-
-    CGFloat _thumbnailHeight,_thumbnailWidth,_snapshotPosition;
-    CGFloat _effectiveThumbnailHeight,_effectiveThumbnailWidth;
-    int _numberOfReceivedFrames;
-    BOOL _shouldRejectFrames;
-}
+@interface VLCMediaThumbnailer : NSObject
 
 + (VLCMediaThumbnailer *)thumbnailerWithMedia:(VLCMedia *)media andDelegate:(id<VLCMediaThumbnailerDelegate>)delegate;
++ (VLCMediaThumbnailer *)thumbnailerWithMedia:(VLCMedia *)media delegate:(id<VLCMediaThumbnailerDelegate>)delegate andVLCLibrary:(VLCLibrary *)library;
 - (void)fetchThumbnail;
 
-@property (readwrite, assign) id<VLCMediaThumbnailerDelegate> delegate;
-@property (readwrite, retain) VLCMedia *media;
+@property (readwrite, weak) id<VLCMediaThumbnailerDelegate> delegate;
+@property (readwrite) VLCMedia *media;
 @property (readwrite, assign) CGImageRef thumbnail;
+@property (readwrite) void * libVLCinstance;
 
 /**
  * Thumbnail Height
@@ -72,7 +62,7 @@
  * has been called.
  * @return snapshot position. Default value 0.5
  */
-@property (readwrite, assign) CGFloat snapshotPosition;
+@property (readwrite, assign) float snapshotPosition;
 @end
 
 @protocol VLCMediaThumbnailerDelegate
